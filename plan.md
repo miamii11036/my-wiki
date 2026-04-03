@@ -91,11 +91,13 @@ npm install
 
 ```typescript
 export const SITE = {
-  website: "test",   // 之後替換為實際部署 URL，如 "https://miamii11036.github.io/my-wiki/"
-  author: "test",    // 之後替換為作者名稱
-  // ...
-  lang: "test",      // 實際應為語言代碼，如 "zh-TW"
-  timezone: "test",  // 實際應為 IANA 格式，如 "Asia/Taipei"
+  website: "https://miamii11036.github.io/my-wiki/", 
+  author: "KY",  
+  profile: "https://miamii11036.github.io/my-wiki/",
+  title: "Miliya's Expedition",
+  lang: "zh-TW",
+  lightAndDarkMode: true,
+  timezone: "Asia/Taipei", 
   // 其餘欄位保持 astro-paper 預設值
 } as const;
 ```
@@ -106,15 +108,15 @@ export const SITE = {
 
 | 欄位 | 用途 | 可選值 / 說明 | 建議個人化 |
 |------|------|--------------|-----------|
-| `website` | 網站完整 URL，用於 SEO、sitemap、canonical URL 等 | 字串，需包含 trailing slash，如 `"https://miamii11036.github.io/my-wiki/"` | **需設定**，目前填 `"test"` |
-| `author` | 預設文章作者名稱，顯示於文章頁面與 RSS | 字串，如 `"miamii11036"` | **需設定**，目前填 `"test"` |
-| `profile` | 作者個人頁面連結，顯示於 Footer | 字串 URL，如 `"https://github.com/miamii11036"` | 選填，可設定 GitHub 個人頁 |
-| `desc` | 網站描述，用於 SEO meta description 與首頁副標題 | 字串，如 `"我的個人知識庫與學習筆記"` | **建議設定** |
-| `title` | 網站標題，顯示於 Header、`<title>` 等 | 字串，如 `"My Wiki"` | **建議設定** |
+| `website` | 網站完整 URL，用於 SEO、sitemap、canonical URL 等 | 字串，需包含 trailing slash，如 `"https://miamii11036.github.io/my-wiki/"` | **需設定**，目前填 `"https://miamii11036.github.io/my-wiki/"` |
+| `author` | 預設文章作者名稱，顯示於文章頁面與 RSS | 字串，如 `"miamii11036"` | **需設定**，目前填 `"KY"` |
+| `profile` | 作者個人頁面連結，顯示於 Footer | 字串 URL，如 `"https://github.com/miamii11036"` | 目前填 `"https://miamii11036.github.io/my-wiki/"` |
+| `desc` | 網站描述，用於 SEO meta description 與首頁副標題 | 字串，如 `"我的個人知識庫與學習筆記"` | 目前填 `"Miliya的知識海"` |
+| `title` | 網站標題，顯示於 Header、`<title>` 等 | 字串，如 `"My Wiki"` | 目前填`"Miliya's Expedition"` |
 | `ogImage` | 預設 Open Graph 圖片檔名（放於 `public/`） | 字串，如 `"og-image.jpg"` | 選填，可先保持預設 |
 | `lightAndDarkMode` | 是否啟用亮/暗主題切換按鈕 | `true` / `false` | 建議保持 `true` |
-| `postPerIndex` | 首頁顯示的最新文章數量 | 正整數，預設 `4` | 可依偏好調整 |
-| `postPerPage` | 文章列表每頁顯示數量 | 正整數，預設 `4` | 可依偏好調整 |
+| `postPerIndex` | 首頁顯示的最新文章數量 | 正整數，預設 `5` | 可依偏好調整 |
+| `postPerPage` | 文章列表每頁顯示數量 | 正整數，預設 `5` | 可依偏好調整 |
 | `scheduledPostMargin` | 排程發布的緩衝時間（毫秒），用於 `pubDatetime` 略早於現在的文章 | 預設 `15 * 60 * 1000`（15 分鐘） | 通常不需更動 |
 | `showArchives` | 是否顯示「封存」頁面入口 | `true` / `false` | 保持 `true` 即可 |
 | `showBackButton` | 文章詳細頁是否顯示「返回」按鈕 | `true` / `false` | 建議保持 `true` |
@@ -123,8 +125,8 @@ export const SITE = {
 | `editPost.url` | 「編輯此頁」連結基礎 URL | 字串，如 `"https://github.com/miamii11036/my-wiki/edit/main/content/notes/"` | **需設定**（若啟用） |
 | `dynamicOgImage` | 是否動態產生 OG 圖片（使用 satori） | `true` / `false` | 保持 `true` |
 | `dir` | 文字方向 | `"ltr"` / `"rtl"` / `"auto"` | 中文請保持 `"ltr"` |
-| `lang` | HTML `lang` 屬性，影響 SEO 與瀏覽器行為 | IETF 語言代碼，如 `"zh-TW"` / `"en"` | **需設定**，目前填 `"test"`（正式值為 `"zh-TW"`） |
-| `timezone` | 預設全域時區，影響文章日期顯示與排程 | IANA 時區格式，如 `"Asia/Taipei"` | **需設定**，目前填 `"test"`（正式值為 `"Asia/Taipei"`） |
+| `lang` | HTML `lang` 屬性，影響 SEO 與瀏覽器行為 | IETF 語言代碼，如 `"zh-TW"` / `"en"` | **需設定**，目前填 `"zh-TW"` |
+| `timezone` | 預設全域時區，影響文章日期顯示與排程 | IANA 時區格式，如 `"Asia/Taipei"` | **需設定**，目前填 `"Asia/Taipei"` |
 
 ---
 
@@ -133,7 +135,7 @@ export const SITE = {
 ### SOCIALS（社群連結）
 
 `public-site/src/constants.ts` 中的 `SOCIALS` 陣列控制頁面上顯示的社群圖示連結。
-**先保留 astro-paper 預設值**，之後再依需求修改或移除不需要的社群項目。
+**先保留 astro-paper 預設值**。
 
 ```typescript
 // 之後依需求調整，例如只保留 GitHub：
@@ -151,7 +153,23 @@ export const SOCIALS: Social[] = [
 
 `SHARE_LINKS` 陣列控制文章詳細頁的分享按鈕。
 **先保留 astro-paper 預設值**（含 WhatsApp、Facebook、X、Telegram、Pinterest、Mail）。
-
+```typescript
+// 之後依需求調整
+export const SHARE_LINKS: Social[] = [
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/sharer.php?u=",
+    linkTitle: `Share this post on Facebook`,
+    icon: IconFacebook,
+  },
+  {
+    name: "X",
+    href: "https://x.com/intent/post?url=",
+    linkTitle: `Share this post on X`,
+    icon: IconBrandX,
+  },
+] as const;
+```
 ---
 
 ## Phase 4：調整 astro.config.ts
@@ -297,6 +315,28 @@ export const BLOG_PATH = "../../content/notes";
 + [佇列是先進先出](./9佇列Queue.md)
 ```
 
+#### Obsidian table 轉換（正文）
+
+掃描 Markdown 正文，轉換所有 table 語法：
+
+**範例**（`9A【題目】使用堆疊模擬佇列.md`）：
+
+```markdown
+# 轉換前
+| Case                 | 說明          |
+| -------------------- | ----------- |
+| 空 Queue 呼叫 `empty()` | 應回傳 `true`  |
+| 只 push 一個元素後 `pop()` | Queue 應變空   |
+| 交錯 push / pop        | 順序仍需正確 FIFO |
+
+# 轉換後
+| Case | 說明 | 
+| :--- | :--- | 
+| 空 Queue 呼叫 `empty()` | 應回傳 `true`  |
+| 只 push 一個元素後 `pop()` | Queue 應變空   |
+| 交錯 push / pop        | 順序仍需正確 FIFO |
+```
+
 #### 腳本範例
 
 ```javascript
@@ -357,6 +397,21 @@ function convertWikiLinks(body) {
       const target = content.trim();
       return `[${target}](./${target}.md)`;
     }
+  });
+}
+
+// 轉換 Obsidian table（確保分隔線符合標準且靠左對齊）
+let totalTables = 0;
+function convertTables(body) {
+  // 匹配 Markdown 表格的分隔線列，例如 | --- | --- |
+  const tableSeparatorRegex = /^\|[\s\-\|:]+\|$/gm;
+
+  return body.replace(tableSeparatorRegex, (match) => {
+    totalTables++;
+    // 將內部的分隔符號拆開，統一轉為 :--- (標準靠左對齊)
+    const cols = match.split('|').filter(cell => cell.trim() !== '');
+    const standardized = cols.map(() => ' :--- ').join('|');
+    return `|${standardized}|`;
   });
 }
 
