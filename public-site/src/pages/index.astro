@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const allNotes = await getCollection('notes');
+const publicNotes = allNotes
+  .filter((note) => note.data.public === true)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+<BaseLayout title="首頁">
+  <h1>my-wiki</h1>
+  <p>個人知識倉儲系統</p>
+  <hr />
+  <h2>公開筆記</h2>
+  {publicNotes.length === 0 && <p>目前沒有公開筆記。</p>}
+  <ul style="list-style: none; padding: 0;">
+    {publicNotes.map((note) => (
+      <li style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border);">
+        <a href={`/my-wiki/notes/${note.slug}`} style="font-size: 1.1rem; font-weight: 600;">
+          {note.data.public_title}
+        </a>
+        <div class="meta" style="margin-top: 0.25rem;">
+          {note.data.date.toISOString().slice(0, 10)}
+        </div>
+        <div class="tags">
+          {note.data.tags.map((tag) => (
+            <span class="tag">{tag}</span>
+          ))}
+        </div>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
