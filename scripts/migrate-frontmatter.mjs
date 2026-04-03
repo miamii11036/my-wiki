@@ -62,7 +62,7 @@ function migrateFrontmatter(rawYaml) {
     tagsStr = 'others';
   }
 
-  const draft = data.public === 'false' ? 'true' : 'false';
+  const draft = data.draft === 'false' ? 'true' : 'false';
 
   const newFrontmatter = [
     `title: ${JSON.stringify(title)}`,

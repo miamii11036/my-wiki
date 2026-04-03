@@ -1,6 +1,6 @@
 ---
-title: "8堆疊Stack"
-description: "8堆疊Stack"
+title: "堆疊Stack"
+description: "堆疊Stack"
 pubDatetime: 2026-04-03T00:00:00.000Z
 tags: [data-structure, stack]
 draft: false

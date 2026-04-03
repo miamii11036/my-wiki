@@ -1,6 +1,6 @@
 ---
-title: "9佇列Queue"
-description: "9佇列Queue"
+title: "佇列Queue"
+description: "佇列Queue"
 pubDatetime: 2026-04-03T00:00:00.000Z
 tags: [data-structure, queue]
 draft: false
