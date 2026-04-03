@@ -322,9 +322,12 @@
         applyFilters();
       } else {
         if (activeTag) {
-          tagContainer.querySelector('.tag-btn.active')?.classList.remove('active');
           const prev = tagContainer.querySelector('.tag-btn.active');
-          if (prev) { prev.style.background = 'transparent'; prev.style.color = '#ccc'; }
+          if (prev) {
+            prev.classList.remove('active');
+            prev.style.background = 'transparent';
+            prev.style.color = '#ccc';
+          }
         }
         activeTag = tag;
         btn.classList.add('active');
