@@ -1,10 +1,10 @@
 export const SITE = {
-  website: "https://miamii11036.github.io/my-wiki/", // replace this with your deployed domain
+  website: "https://miamii11036.github.io/my-wiki/",
   author: "KY",
   profile: "https://miamii11036.github.io/my-wiki/",
   desc: "Miliya的知識海",
   title: "Miliya's Expedition",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "banner.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 4,
@@ -12,9 +12,9 @@ export const SITE = {
   showArchives: true,
   showBackButton: true, // show back button in post detail
   editPost: {
-    enabled: true,
+    enabled: false,
     text: "Edit page",
-    url: "https://github.com/satnaing/astro-paper/edit/main/",
+    url: "https://github.com/miamii11036/my-wiki/edit/main/",
   },
   dynamicOgImage: true,
   dir: "ltr", // "rtl" | "auto"
