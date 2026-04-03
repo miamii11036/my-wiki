@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    {
+      "id": "9佇列Queue",
+      "title": "9佇列Queue",
+      "tags": [
+        "data-structure",
+        "queue"
+      ],
+      "public": true,
+      "group": "data-structure"
+    },
+    {
+      "id": "9A【題目】使用堆疊模擬佇列",
+      "title": "9A【題目】使用堆疊模擬佇列",
+      "tags": [
+        "leetcode",
+        "stack",
+        "queue"
+      ],
+      "public": true,
+      "group": "leetcode"
+    },
+    {
+      "id": "8堆疊Stack",
+      "title": "8堆疊Stack",
+      "tags": [
+        "data-structure",
+        "stack"
+      ],
+      "public": true,
+      "group": "data-structure"
+    }
+  ],
+  "links": [
+    {
+      "source": "9A【題目】使用堆疊模擬佇列",
+      "target": "8堆疊Stack"
+    },
+    {
+      "source": "9A【題目】使用堆疊模擬佇列",
+      "target": "9佇列Queue"
+    }
+  ]
+}

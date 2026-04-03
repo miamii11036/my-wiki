@@ -1,0 +1,8 @@
+# Node modules
+node_modules/
+scripts/node_modules/
+
+# Build artifacts
+public-site/dist/
+public-site/.astro/
+public-site/src/content/notes/
