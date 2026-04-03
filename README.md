@@ -31,7 +31,8 @@ my-wiki/
 │   ├── build-graph.mjs                 # 解析 wikilink，生成 graph.json
 │   └── package.json
 └── .github/
-    └── workflows/    # Phase 4：CI/CD（待實作）
+    └── workflows/
+        └── deploy.yml  # CI/CD：自動建構並部署至 GitHub Pages
 ```
 
 ## 本地開發
@@ -73,3 +74,20 @@ cd scripts && npm install && cd .. && node scripts/build-graph.mjs
 - **remark-wiki-link** — Wikilink 語法支援
 - **D3.js v7** — 知識圖譜視覺化（`graph-viewer/index.html`）
 - **GitHub Pages** — 部署至 `miamii11036.github.io/my-wiki`
+
+## CI/CD 與部署
+
+### 自動部署
+
+每當推送到 `main` 分支，且 `content/` 或 `public-site/` 有變更時，GitHub Actions 會自動執行以下流程：
+
+1. 安裝 `public-site` 依賴（`npm ci`）
+2. 建構公開網站（`npm run build`，含 `prebuild` 複製筆記）
+3. 建構知識圖譜資料（`node scripts/build-graph.mjs`）
+4. 上傳產出物並部署至 GitHub Pages
+
+部署完成後可透過以下網址瀏覽：**https://miamii11036.github.io/my-wiki**
+
+### 手動觸發部署
+
+若需要手動觸發部署，請前往 GitHub 的 **Actions** 頁面，找到 `Build & Deploy to GitHub Pages` workflow，點擊 **Run workflow** 按鈕。
