@@ -49,7 +49,7 @@ npm run build
 
 ## 技術棧
 
-- **Astro v4** — 靜態網站框架
+- **Astro v5** — 靜態網站框架
 - **remark-wiki-link** — Wikilink 語法支援
 - **D3.js** — 知識圖譜視覺化（Phase 3）
 - **GitHub Pages** — 部署至 `miamii11036.github.io/my-wiki`
