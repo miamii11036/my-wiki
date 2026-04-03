@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const allNotes = await getCollection('notes');
+  const publicNotes = allNotes.filter((note) => note.data.public === true);
+  return publicNotes.map((note) => ({
+    params: { slug: note.slug },
+    props: { note },
+  }));
+}
+
+const { note } = Astro.props;
+const { Content } = await note.render();
+---
+<BaseLayout title={note.data.public_title}>
+  <h1>{note.data.public_title}</h1>
+  <div class="meta">
+    <span>{note.data.date.toISOString().slice(0, 10)}</span>
+  </div>
+  <div class="tags">
+    {note.data.tags.map((tag) => (
+      <span class="tag">{tag}</span>
+    ))}
+  </div>
+  <hr />
+  <Content />
+</BaseLayout>
