@@ -323,13 +323,13 @@ function migrateFrontmatter(rawYaml, body) {
   const data = {};
   for (const line of lines) {
     const m = line.match(/^(\w+):\s*(.*)$/);
-    if (m) data[m[1]] = m[2].replace(/^"|"$/g, '').trim();
+    if (m) data[m[1]] = m[2].replace(/^["']|["']$/g, '').trim();
   }
 
   const title = data.title || '';
   const description = title;
   const pubDatetime = data.date ? `${data.date}T00:00:00.000Z` : '';
-  const tags = rawYaml.match(/^tags:\s*\[([^\]]*)\]/m)?.[1] || '"others"';
+  const tags = rawYaml.match(/^tags:\s*\[([^\]]*)\]/m)?.[1] || 'others';
   const draft = data.public === 'false' ? 'true' : 'false';
 
   const newFrontmatter = [
