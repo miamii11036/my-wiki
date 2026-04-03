@@ -1,0 +1,12 @@
+{
+  "name": "my-wiki-scripts",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node build-graph.mjs"
+  },
+  "dependencies": {
+    "glob": "^11.0.0",
+    "gray-matter": "^4.0.3"
+  }
+}
