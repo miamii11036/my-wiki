@@ -40,13 +40,6 @@ my-wiki/
 ```bash
 cd public-site
 npm install
-npm run dev
-```
-
-## 建置
-
-```bash
-cd public-site
 npm run build
 ```
 
@@ -63,6 +56,10 @@ cd scripts && npm install && cd .. && node scripts/build-graph.mjs
 執行後會在 `graph-viewer/data/graph.json` 生成圖譜資料（包含節點與 wikilink 邊）。
 
 ### 查看知識圖譜
+```bash
+cd my-wiki
+npx http-server ./graph-viewer -p 8080 --cors
+```
 
 在瀏覽器中直接開啟 `graph-viewer/index.html`（本地使用，不部署至公開網站）。
 
