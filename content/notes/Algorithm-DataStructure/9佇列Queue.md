@@ -1,10 +1,9 @@
 ---
 title: "9佇列Queue"
-public_title: "佇列 Queue"
-date: 2026-04-03
+description: "9佇列Queue"
+pubDatetime: 2026-04-03T00:00:00.000Z
 tags: [data-structure, queue]
-public: true
-aliases: [9佇列Queue]
+draft: false
 ---
 
 佇列是一個由左至右的線性結構，它就像一條水管，資料統一從一端進入，從另一端離開，因此必須遵守<mark>**【先進先出FIFO】**</mark>原則。
@@ -16,7 +15,7 @@ aliases: [9佇列Queue]
 + 查看頭端資料的過程稱為Peek
 
 |端點|別名|負責|
-|---|---|---|
+| :--- | :--- | :--- |
 |**Front**（前端/頭端）|Head|Dequeue，資料出口|
 |**Rear**（後端/尾端）|Tail / Back|Enqueue，資料入口|
 
