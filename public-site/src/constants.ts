@@ -50,24 +50,24 @@ export const SHARE_LINKS: Social[] = [
   //   linkTitle: `Share this post via WhatsApp`,
   //   icon: IconWhatsapp,
   // },
-  // {
-  //   name: "Facebook",
-  //   href: "https://www.facebook.com/sharer.php?u=",
-  //   linkTitle: `Share this post on Facebook`,
-  //   icon: IconFacebook,
-  // },
-  // {
-  //   name: "X",
-  //   href: "https://x.com/intent/post?url=",
-  //   linkTitle: `Share this post on X`,
-  //   icon: IconBrandX,
-  // },
-  // {
-  //   name: "Telegram",
-  //   href: "https://t.me/share/url?url=",
-  //   linkTitle: `Share this post via Telegram`,
-  //   icon: IconTelegram,
-  // },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/sharer.php?u=",
+    linkTitle: `Share this post on Facebook`,
+    icon: IconFacebook,
+  },
+  {
+    name: "X",
+    href: "https://x.com/intent/post?url=",
+    linkTitle: `Share this post on X`,
+    icon: IconBrandX,
+  },
+  {
+    name: "Telegram",
+    href: "https://t.me/share/url?url=",
+    linkTitle: `Share this post via Telegram`,
+    icon: IconTelegram,
+  },
   // {
   //   name: "Pinterest",
   //   href: "https://pinterest.com/pin/create/button/?url=",
