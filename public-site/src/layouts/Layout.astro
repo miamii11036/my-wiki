@@ -130,6 +130,21 @@ const structuredData = {
 
     <ClientRouter />
 
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GT-NGM447DR"
+    ></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "GT-NGM447DR");
+    </script>
+
     <script is:inline src={import.meta.env.BASE_URL + "/toggle-theme.js"}></script>
   </head>
   <body>
