@@ -1,8 +1,28 @@
 {
   "nodes": [
     {
+      "id": "2Cache",
+      "title": "什麼是 Cache？",
+      "tags": [
+        "interview",
+        "knowhow"
+      ],
+      "public": true,
+      "group": "interview"
+    },
+    {
+      "id": "1Nginx",
+      "title": "什麼是 Nginx？",
+      "tags": [
+        "interview",
+        "knowhow"
+      ],
+      "public": true,
+      "group": "interview"
+    },
+    {
       "id": "9佇列Queue",
-      "title": "9佇列Queue",
+      "title": "佇列Queue",
       "tags": [
         "data-structure",
         "queue"
@@ -12,27 +32,87 @@
     },
     {
       "id": "9A【題目】使用堆疊模擬佇列",
-      "title": "9A【題目】使用堆疊模擬佇列",
+      "title": "【題目】使用堆疊模擬佇列",
       "tags": [
-        "leetcode",
         "stack",
-        "queue"
+        "queue",
+        "Grind75"
       ],
       "public": true,
-      "group": "leetcode"
+      "group": "stack"
     },
     {
       "id": "8堆疊Stack",
-      "title": "8堆疊Stack",
+      "title": "堆疊Stack",
       "tags": [
         "data-structure",
         "stack"
       ],
       "public": true,
       "group": "data-structure"
+    },
+    {
+      "id": "11貪心演算法",
+      "title": "貪心演算法Greedy",
+      "tags": [
+        "algorithm",
+        "greedy"
+      ],
+      "public": true,
+      "group": "algorithm"
+    },
+    {
+      "id": "11B【題目】找最大容積",
+      "title": "【題目】找最大容積",
+      "tags": [
+        "Grind75",
+        "greedy",
+        "two-pointer"
+      ],
+      "public": true,
+      "group": "Grind75"
+    },
+    {
+      "id": "11A【題目】找最大回文",
+      "title": "【題目】找最大回文",
+      "tags": [
+        "Grind75",
+        "greedy",
+        "HM"
+      ],
+      "public": true,
+      "group": "Grind75"
+    },
+    {
+      "id": "10動態規劃",
+      "title": "動態規劃Dynamic Programming",
+      "tags": [
+        "algorithm",
+        "DP"
+      ],
+      "public": true,
+      "group": "algorithm"
+    },
+    {
+      "id": "10A【題目】爬樓梯",
+      "title": "【題目】爬樓梯",
+      "tags": [
+        "DP",
+        "Grind75"
+      ],
+      "public": true,
+      "group": "DP"
     }
   ],
   "links": [
+    {
+      "source": "2Cache",
+      "target": "1Nginx"
+    },
+    {
+      "source": "1Nginx",
+      "target": "2Cache"
+    },
     {
       "source": "9A【題目】使用堆疊模擬佇列",
       "target": "8堆疊Stack"
@@ -40,6 +120,26 @@
     {
       "source": "9A【題目】使用堆疊模擬佇列",
       "target": "9佇列Queue"
+    },
+    {
+      "source": "11貪心演算法",
+      "target": "10動態規劃"
+    },
+    {
+      "source": "11B【題目】找最大容積",
+      "target": "11貪心演算法"
+    },
+    {
+      "source": "11A【題目】找最大回文",
+      "target": "11貪心演算法"
+    },
+    {
+      "source": "10A【題目】爬樓梯",
+      "target": "10動態規劃"
+    },
+    {
+      "source": "10A【題目】爬樓梯",
+      "target": "10動態規劃"
     }
   ]
 }
