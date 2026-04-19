@@ -1,12 +1,12 @@
 ---
 title: "Primitive Variable V.S Reference Variable"
 description: "兩種Java變數的基礎"
-pubDatetime: ~
+pubDatetime: 2026-04-19T12:00:00.000Z
 tags: [java, knowhow]
 draft: false
 ---
 
-在Java中，變數可以根據存放位置分為 Primitive 與 Reference。
+在Java中，變數可以根據儲存的內容分為 Primitive 與 Reference。
 # Primitive
 儲存Value本身並存放在一個名為<mark>Stack</mark>的記憶體中
 - 能做為Primitive的DataType有 int、double、char(字元)、boolean
@@ -28,10 +28,18 @@ draft: false
     System.out.println(b); //輸出10
     System.out.println(a); //輸出6
     ```
+    ```
+    ┌─────────────────┐
+    │      STACK      │ 
+    ├─────────────────┤  
+    │ a → 6           │
+    │ b → 6           │     
+    └─────────────────┘ 
+    ```
 - 因此，若沒有賦值給Primitive變數，則輸出為<mark> 0 or false </mark>
 
 # Reference
-儲存<mark>Stack的位址</mark>，而非Value本身，並且存放在一個名為<mark>Heap</mark>的記憶體中
+儲存<mark>Heap的位址</mark>，而非Value本身，並且變數本身也存放在名為Stack的記憶體中
 - 能做為Reference的DataType有 String、Array、Object(物件)
 - 宣告變數實用<mark>大寫</mark>
     ```java
@@ -49,5 +57,21 @@ draft: false
 
     System.out.println(b[0]); //輸出99
     System.out.println(a[0]); //輸出99
+    ```
+    ```
+    ┌─────────────────┐        ┌─────────────────────┐
+    │      STACK      │        │        HEAP         │
+    ├─────────────────┤        ├─────────────────────┤
+    │  a → 0x001   ───┼──┬────▶│  [1, 2, 3]          │
+    │  b → 0x001   ───┼──┘     │                     │
+    └─────────────────┘        └─────────────────────┘
+    當執行 b[0] = 99;後
+    ┌─────────────────┐         ┌─────────────────────┐
+    │      STACK      │         │        HEAP         │
+    ├─────────────────┤         ├─────────────────────┤
+    │  a → 0x001   ───┼──┬────▶ │  [99, 2, 3]         │
+    │  b → 0x001   ───┼──┘      │   ↑                 │
+    └─────────────────┘         │  修改 index 0 為 99  │
+                                └─────────────────────┘
     ```
 - 因此，若沒有賦值給Reference變數，則輸出為 null
