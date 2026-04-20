@@ -1,7 +1,7 @@
 ---
-title: ""
-description: "記憶體區塊"
-pubDatetime: 
+title: "JVM記憶體分區"
+description: "Java的記憶體分區用途說明"
+pubDatetime: 2026-04-19T00:00:00.000Z
 tags: [java, knowhow]
 draft: true
 ---
