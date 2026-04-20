@@ -1,7 +1,7 @@
 ---
 title: "Primitive Variable V.S Reference Variable"
 description: "兩種Java變數的基礎"
-pubDatetime: 2026-04-19T12:00:00.000Z
+pubDatetime:
 tags: [java, knowhow]
 draft: false
 ---
