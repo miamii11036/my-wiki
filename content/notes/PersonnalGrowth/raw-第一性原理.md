@@ -1,7 +1,7 @@
 ---
 title: "第一性原理思考"
 description: "什麼是第一性原理"
-pubDatetime: 
+pubDatetime: 2026-05-01T15:55:56.000Z
 tags: [self-growth]
 draft: false
 ---

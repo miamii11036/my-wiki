@@ -27,6 +27,9 @@ jobs:
         with:
           node-version: 20
 
+      - name: Fill empty pubDatetime before build
+        run: bash scripts/update-pubdatetime.sh --mode=all --policy=empty
+
       # 建構公開網站
       - name: Install dependencies
         working-directory: public-site
